@@ -2,12 +2,44 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Syne:wght@400..800&display=swap"
+      rel="stylesheet"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ejemplos responsive con Sass</title>
+    <title>Conquer Blocks</title>
   </head>
   <body>
-    <h1>Ejemplos Responsive</h1>
+    <div class="container">
+      <header class="header">
+        <div class="header__logo">
+          <img src="/img/logo.png" alt="" class="header__logo-image" />
+        </div>
+        <nav class="header__nav" role="navigation">
+  <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+  <label for="menu-toggle" class="menu-icon"></label>
+
+  <ul class="header__nav-list">
+    <li class="header__nav-item dropdown">
+      <input type="checkbox" id="dropdown-toggle" class="dropdown-toggle" />
+      <label for="dropdown-toggle" class="dropdown-label">
+        Cursos <span class="dropdown-arrow">▼</span>
+      </label>
+      <ul class="dropdown-menu">
+        <li><a href="#" class="dropdown-item">Master en Desarrollo Web Full-Stack</a></li>
+        <li><a href="#" class="dropdown-item">Master en Inteligencia Artificial</a></li>
+        <li><a href="#" class="dropdown-item">Master en Desarrollo Blockchain</a></li>
+      </ul>
+    </li>
+    <li class="header__nav-item"><a href="/about.html">Quienes Somos</a></li>
+    <li class="header__nav-item"><a href="/register.html">Registro</a></li>
+    <li class="header__nav-item"><a href="/login.html">Login</a></li>
+  </ul>
+</nav>
+      </header>
+    </div>
 
     <script type="module" src="/src/main.js"></script>
   </body>
