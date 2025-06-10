@@ -1,9 +1,14 @@
 // Tipografias //
-
+$font-titulos-encabezados: "Syne", sans-serif;
+$font-textos: "Inter", sans-serif;
 
 // Colores //
-
-
+$color-fondo: #0A0E1A;
+$color-botones:#00F6FF;
+$color-borde: linear-gradient(135deg, #7F00FF, #E100FF, #00F6FF);
+$color-texto: #FFFFFF;
+$color-texto-secundario: #BFC3D9;
+$color-botones-hover:#5E0BC7;
 // Breakpoints //
 $bp-tablet: 768px;
 $bp-tablet-horizontal: 1024px;

@@ -1,0 +1,165 @@
+@use "../abstracts/mixins" as m;
+@use "../abstracts/variables" as *;
+.header {
+    padding: 1rem;
+    position: fixed; // asegura que siempre esté visible
+    top: 0;
+    left: 0;
+    width: 100%;
+    @include m.tarjeta-semitransparente(100%, 50px,0px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__logo {
+        width: 250px; // Más pequeño para móvil
+        height: auto;
+        background-image: linear-gradient(to right, #7F00FF, #E100FF, #00F6FF);
+        border-radius: 10px;
+        &-image {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+    }
+
+    &__nav {
+        &-list {
+            display: none; // Por defecto oculto en móvil
+            flex-direction: column;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            padding: 1rem;
+            list-style: none;
+            margin: 0;
+            text-align: center; // Centrar el texto
+        }
+
+        &-item {
+            position: relative;
+            
+            a {
+                color: white;
+                text-decoration: none;
+                font-size: 1.1rem;
+                display: block;
+                padding: 0.8rem;
+                text-align: center; // Centrar el texto
+                
+                &:hover {
+                    background: rgba(255, 255, 255, 0.1);
+                    border-radius: 4px;
+                }
+            }
+
+            &.dropdown {
+                .dropdown-label {
+                    color: white;
+                    cursor: pointer;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center; // Centrar contenido
+                    gap: 0.5rem;
+                    padding: 0.8rem;
+                }
+
+                .dropdown-menu {
+                    display: none;
+                    position: static; // Por defecto en móvil
+                    background: rgba(255, 255, 255, 0.05);
+                    border-radius: 4px;
+                    padding: 0.5rem;
+                    margin-left: 1rem;
+                    
+                    li {
+                        list-style: none;
+                        
+                        a {
+                            padding: 0.8rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // Controles del menú móvil
+    .menu-toggle {
+        display: none;
+    }
+
+    .menu-icon {
+        display: block;
+        color: white;
+        font-size: 1.5rem;
+        cursor: pointer;
+        padding: 0.5rem;
+    }
+
+    // Estados activos
+    .menu-toggle:checked ~ .header__nav-list {
+        display: flex;
+    }
+
+    .dropdown-toggle:checked ~ .dropdown-menu {
+        display: block;
+    }
+}
+
+// Estilos para tablet y desktop
+@include m.breakpoint(tablet) {
+    .header {
+        &__logo {
+            width: 220px; // Logo más grande en tablet
+        }
+    }
+}
+
+@include m.breakpoint(desktop) {
+    .header {
+        &__logo {
+            width: 280px; // Logo más grande en desktop
+        }
+
+        &__nav {
+            .menu-icon {
+                display: none; // Ocultar menú hamburguesa
+            }
+
+            &-list {
+                display: flex; // Mostrar siempre el menú
+                flex-direction: row;
+                position: static;
+                gap: 2rem;
+                padding: 0;
+                align-items: center;
+                background: none;
+                backdrop-filter: none;
+            }
+
+            &-item {
+                &.dropdown {
+                    .dropdown-menu {
+                        position: absolute; // Menú desplegable como popup
+                        top: 100%;
+                        left: 0;
+                        min-width: 250px;
+                        background: rgba(255, 255, 255, 0.1);
+                        backdrop-filter: blur(10px);
+                        -webkit-backdrop-filter: blur(10px);
+                        margin-left: 0;
+                    }
+
+                    &:hover .dropdown-menu {
+                        display: block; // Mostrar en hover en desktop
+                    }
+                }
+            }
+        }
+    }
+}
