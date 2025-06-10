@@ -18,27 +18,116 @@
           <img src="/img/logo.png" alt="" class="header__logo-image" />
         </div>
         <nav class="header__nav" role="navigation">
-  <input type="checkbox" id="menu-toggle" class="menu-toggle" />
-  <label for="menu-toggle" class="menu-icon"></label>
+          <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+          <label for="menu-toggle" class="menu-icon"></label>
 
-  <ul class="header__nav-list">
-    <li class="header__nav-item dropdown">
-      <input type="checkbox" id="dropdown-toggle" class="dropdown-toggle" />
-      <label for="dropdown-toggle" class="dropdown-label">
-        Cursos <span class="dropdown-arrow">▼</span>
-      </label>
-      <ul class="dropdown-menu">
-        <li><a href="#" class="dropdown-item">Master en Desarrollo Web Full-Stack</a></li>
-        <li><a href="#" class="dropdown-item">Master en Inteligencia Artificial</a></li>
-        <li><a href="#" class="dropdown-item">Master en Desarrollo Blockchain</a></li>
-      </ul>
-    </li>
-    <li class="header__nav-item"><a href="/about.html">Quienes Somos</a></li>
-    <li class="header__nav-item"><a href="/register.html">Registro</a></li>
-    <li class="header__nav-item"><a href="/login.html">Login</a></li>
-  </ul>
-</nav>
+          <ul class="header__nav-list">
+            <li class="header__nav-item dropdown">
+              <input
+                type="checkbox"
+                id="dropdown-toggle"
+                class="dropdown-toggle"
+              />
+              <label for="dropdown-toggle" class="dropdown-label">
+                Cursos <span class="dropdown-arrow">▼</span>
+              </label>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="#" class="dropdown-item"
+                    >Master en Desarrollo Web Full-Stack</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="dropdown-item"
+                    >Master en Inteligencia Artificial</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="dropdown-item"
+                    >Master en Desarrollo Blockchain</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="header__nav-item">
+              <a href="/about.html">Quienes Somos</a>
+            </li>
+            <li class="header__nav-item">
+              <a href="/register.html">Registro</a>
+            </li>
+            <li class="header__nav-item"><a href="/login.html">Login</a></li>
+          </ul>
+        </nav>
       </header>
+      <main class="main">
+        <!-- Hero Section ------------------------------------------------->
+
+        <section class="hero">
+          <div class="hero__content">
+            <img
+              src="/img/fondo1.webp"
+              alt="Imagen de fondo"
+              class="hero__image"
+            />
+
+            <h1 class="hero__title">Conquer Blocks</h1>
+            <p class="hero__subtitle">
+              Aprende a programar y domina el desarrollo web, inteligencia
+              artificial y blockchain.
+            </p>
+            <a href="/register.html" class="hero__cta">¡Comienza ahora!</a>
+          </div>
+        </section>
+
+        <!-- Cursos Section ------------------------------------------------->
+
+        <section class="features">
+          <h2 class="features__title">Nuestros Cursos</h2>
+          <div class="features__grid">
+            <div class="feature">
+              <h3 class="feature__title">Desarrollo Web Full-Stack</h3>
+              <p class="feature__description">
+                Aprende las tecnologías más demandadas del mercado.
+              </p>
+            </div>
+            <div class="feature">
+              <h3 class="feature__title">Inteligencia Artificial</h3>
+              <p class="feature__description">
+                Domina el futuro con nuestros cursos de IA.
+              </p>
+            </div>
+            <div class="feature">
+              <h3 class="feature__title">Blockchain</h3>
+              <p class="feature__description">
+                Conviértete en un experto en tecnología blockchain.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Testimonios Section ---------------------------------------------->
+
+        <section class="testimonials">
+          <h2 class="testimonials__title">Testimonios</h2>
+          <div class="testimonials__grid">
+            <blockquote class="testimonial">
+              "Gracias a Conquer Blocks he conseguido mi primer trabajo como
+              desarrollador web."
+              <cite>- Juan Pérez</cite>
+            </blockquote>
+            <blockquote class="testimonial">
+              "Los cursos son muy completos y los profesores son excelentes."
+              <cite>- María López</cite>
+            </blockquote>
+          </div>
+        </section>
+      </main>
+
+      <!-- footer ---------------------------------------------->
+
+      <footer class="footer">
+        <p>&copy; 2023 Conquer Blocks. Todos los derechos reservados.</p>
+      </footer>
     </div>
 
     <script type="module" src="/src/main.js"></script>
