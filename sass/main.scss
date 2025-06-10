@@ -6,4 +6,15 @@
 @use "themes/themes";
 @use "vendors/vendors";
 
-
+body {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  background: url("../img/background.webp") no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center center;
+  font-size: 16px;
+  font-family: $font-textos;
+}
