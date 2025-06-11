@@ -6,10 +6,12 @@
     top: 0;
     left: 0;
     width: 100%;
+    
     @include m.tarjeta-semitransparente(100%, 50px,0px);
     display: flex;
     align-items: center;
     justify-content: space-between;
+
 
     &__logo {
         width: 250px; // Más pequeño para móvil
