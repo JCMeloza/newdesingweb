@@ -6,7 +6,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    
+    z-index: 1000;
     @include m.tarjeta-semitransparente(100%, 50px,0px);
     display: flex;
     align-items: center;
@@ -33,7 +33,7 @@
             top: 100%;
             left: 0;
             right: 0;
-            background: rgba(255, 255, 255, 0.1);
+            background: rgba(172, 30, 201, 0.5);
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
             padding: 1rem;
@@ -73,7 +73,7 @@
                 .dropdown-menu {
                     display: none;
                     position: static; // Por defecto en móvil
-                    background: rgba(255, 255, 255, 0.05);
+                    background-image: linear-gradient(to right, #7F00FF, #E100FF, #00F6FF);
                     border-radius: 4px;
                     padding: 0.5rem;
                     margin-left: 1rem;
@@ -151,7 +151,7 @@
                         top: 100%;
                         left: 0;
                         min-width: 250px;
-                        background: rgba(255, 255, 255, 0.1);
+                        background: rgba(172, 30, 201, 0.5);
                         backdrop-filter: blur(10px);
                         -webkit-backdrop-filter: blur(10px);
                         margin-left: 0;
