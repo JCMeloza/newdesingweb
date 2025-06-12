@@ -92,11 +92,17 @@ main {
         font-family: $font-textos;
         font-size: 1.2rem;
         transition: background 0.3s ease;
-        
+        font-family: $font-titulos-encabezados;
+        font-weight: 700;
+        text-transform: uppercase;
         margin-bottom: 1rem;
-        align-self: center; // Centra el botón
+        align-self: center; 
+        color: #9E0ADC;
+        box-shadow: 0 8px 15px #9E0ADC;
         &:hover {
             background: $color-botones-hover;
+            color: $color-texto;
+            box-shadow: 0 8px 15px $color-botones;
         }
     }
 
