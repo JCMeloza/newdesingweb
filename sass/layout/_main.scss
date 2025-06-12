@@ -10,6 +10,7 @@ main {
 
 .hero {
     margin-top: 50px;
+    margin-bottom: 50px;
     &__content{
         @include m.tarjeta-semitransparente(100%, 100%, 10px);
         padding: 0.5rem;
@@ -38,14 +39,18 @@ main {
 
     &__title{
         font-family: $font-titulos-encabezados;
-        font-size: 2.5rem;
+        font-size: 1.5rem;
         margin-bottom: 2rem;
         font-weight: 900;
         text-transform: uppercase;
         color: #c0eb84d5;
-        position: relative;
+        position: absolute;
+        top:167px;
+        left: 47px;
         z-index: 1;
-        
+        border: 2px solid $color-botones;
+        border-radius: 10px;
+        padding: 5px 15px;
         &::after {
             content: "";
             position: absolute;
@@ -68,8 +73,23 @@ main {
         top: 180px;
         text-align:center;
     }
-    &__image{
+    &__video{
         width: 100%;
-        border-radius: 12px;
+        
     }
+    &__cta{
+        padding: 10px 5px;
+        background: $color-botones;
+        color: $color-texto;
+        border-radius: 10px;
+        text-decoration: none;
+        font-family: $font-textos;
+        font-size: 1.2rem;
+        transition: background 0.3s ease;
+        margin-bottom: 10px;
+        &:hover {
+            background: $color-botones-hover;
+        }
+    }
+
 }
