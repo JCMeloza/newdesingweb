@@ -51,7 +51,7 @@
             <li class="header__nav-item">
               <a href="/about.html">Quienes Somos</a>
             </li>
-            <li class="header__nav-item">
+            <li class="header__nav-item registro">
               <a href="/register.html">Registro</a>
             </li>
             <li class="header__nav-item"><a href="/login.html">Login</a></li>
@@ -63,9 +63,13 @@
 
         <section class="hero">
           <div class="hero__content">
-            <img src="/img/fondo1.webp" alt="" class="hero__image" />
-
             <h1 class="hero__title">Conquer Blocks</h1>
+            
+            <video id="heroVideo" width="100%" poster="/img/programando.webp" autoplay loop muted>
+              <source src="/img/hero.mp4" type="video/mp4" />
+              Tu navegador no soporta el formato de video MP4.
+            </video>
+
             <p class="hero__subtitle">
               Aprende a programar y domina el desarrollo web, inteligencia
               artificial y blockchain.
@@ -126,5 +130,26 @@
     </div>
 
     <script type="module" src="/src/main.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const video = document.getElementById('heroVideo');
+        
+        // Crear el observer
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              video.play(); // Reproducir cuando es visible
+            } else {
+              video.pause(); // Pausar cuando no es visible
+            }
+          });
+        }, {
+          threshold: 0.5 // El video debe estar al menos 50% visible
+        });
+
+        // Observar el video
+        observer.observe(video);
+      });
+    </script>
   </body>
 </html>
