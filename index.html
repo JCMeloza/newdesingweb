@@ -65,7 +65,7 @@
           <div class="hero__content">
             <h1 class="hero__title">Conquer Blocks</h1>
             
-            <video id="heroVideo" width="100%" poster="/img/programando.webp" autoplay loop muted>
+            <video class="hero__video" width="100%" poster="/img/programando.webp" autoplay loop muted playsinline>
               <source src="/img/hero.mp4" type="video/mp4" />
               Tu navegador no soporta el formato de video MP4.
             </video>
@@ -130,26 +130,5 @@
     </div>
 
     <script type="module" src="/src/main.js"></script>
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const video = document.getElementById('heroVideo');
-        
-        // Crear el observer
-        const observer = new IntersectionObserver((entries) => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              video.play(); // Reproducir cuando es visible
-            } else {
-              video.pause(); // Pausar cuando no es visible
-            }
-          });
-        }, {
-          threshold: 0.5 // El video debe estar al menos 50% visible
-        });
-
-        // Observar el video
-        observer.observe(video);
-      });
-    </script>
   </body>
 </html>
