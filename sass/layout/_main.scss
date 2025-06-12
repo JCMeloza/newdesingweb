@@ -18,16 +18,33 @@ main {
         font-size: 1.5rem;
         
     }
+    &__video {
+        view-timeline-name: --videoTimeline;
+        view-timeline-axis: block;
+        animation-timeline: --videoTimeline;
+        animation-name: videoPlayback;
+        animation-range: entry 25% exit 25%;
+        animation-fill-mode: both;
+    }
+
+    @keyframes videoPlayback {
+        from {
+            opacity: 0.3;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
     &__title{
         font-family: $font-titulos-encabezados;
-        font-size: 1.8rem;
-        margin-bottom: 1rem;
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
         font-weight: 900;
-        position: absolute;
-        top: 165px;
-        left: 45px;
-        text-transform: uppercase ;
-        color:#c0eb84d5;
+        text-transform: uppercase;
+        color: #c0eb84d5;
+        position: relative;
+        z-index: 1;
         
         &::after {
             content: "";
