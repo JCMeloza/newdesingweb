@@ -29,18 +29,56 @@
   .menu-toggle:checked ~ .menu-icon::before {
     content: "✕"; // Icono X
   }
+@include m.breakpoint(desktop) {
+  .registro {
+    //background-color: #041A3F;
+    border-radius: 10px;
+    position: relative; // Asegura que los pseudoelementos se posicionen correctamente
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      width: 60%;
+      height: 60%;
+      background-image: conic-gradient(from 0deg, transparent 0%,#00F6FF,  #7F00FF, #E100FF, #00F6FF);
+      top: 50%;
+      left: 50%;
+      transform: translate(0%, 0%) rotate(0deg); // Añadimos rotate
+      z-index: -1;
+      padding: 2px;
+      border-radius: 10px;
+      animation: spin 3s linear infinite; // Animación para el gradiente
+    }
+
+    &::before {
+      filter: blur(1.5rem);
+      opacity: 0.5;
+    }
+  }
+
+  @keyframes spin {
+    from {
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+    to {
+      transform: translate(-50%, -50%) rotate(360deg); // Hacemos rotar el pseudoelemento
+    }
+  }
+}
+
 
   .header__nav-list {
     list-style: none;
     display: none;
     flex-direction: column;
     width: 90%;
-    background: rgba(63, 3, 149, 0.9);
+    //background: rgba(63, 3, 149, 0.9);
     border-radius: 8px;
     margin: auto;
     .header__nav-item {
       position: relative;
-
+      
       a,
       .dropdown-label {
         display: block;
@@ -59,7 +97,7 @@
         .dropdown-menu {
           display: none;
           flex-direction: column;
-          background-color: rgba(255, 255, 255, 0.05);
+          background-color: rgba(172, 30, 201, 0.8);;
           border-radius: 4px;
           margin: 0.2rem;
 
