@@ -14,13 +14,14 @@ main {
     &__content{
         @include m.tarjeta-semitransparente(100%, 100%, 10px);
         padding: 0.5rem;
-        padding-bottom: 2rem; // Añadimos más padding abajo
+        padding-bottom: 1rem; // Añadimos más padding abajo
         text-align: center;
         color: white;
         font-size: 1.5rem;
         display: flex;
         flex-direction: column;
-        gap: 1rem; // Espacio entre elementos
+        //gap: 1rem; // Espacio entre elementos
+        align-items: center;
     }
     &__video {
         view-timeline-name: --videoTimeline;
@@ -47,9 +48,9 @@ main {
         font-weight: 900;
         text-transform: uppercase;
         color: #c0eb84d5;
-        position: absolute;
-        top:167px;
-        left: 47px;
+        //position: absolute;
+        //top:167px;
+        //left: 47px;
         z-index: 1;
         border: 2px solid $color-botones;
         border-radius: 10px;
@@ -60,7 +61,7 @@ main {
             width: 296px;
             height: 2px;
             background: $color-borde;
-            bottom: -10px;
+            bottom: 199px;
             left: 50%;
             transform: translateX(-50%);
             border-radius: 2px;
@@ -90,7 +91,7 @@ main {
         font-family: $font-textos;
         font-size: 1.2rem;
         transition: background 0.3s ease;
-        margin-top: 2rem; // Espacio arriba
+        
         margin-bottom: 1rem;
         align-self: center; // Centra el botón
         &:hover {
