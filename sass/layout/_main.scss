@@ -144,17 +144,22 @@ main {
         padding: 1rem;
         text-align: center;
         
-        border-radius: 10px;
         @include m.tarjeta-semitransparente(100%, 100%, 10px,1px,0.1);
         img{
             padding-top: 15px;
             width: 80%;
-            border-radius:10px;
+            border-radius:100%;
+            
+            
+        }
+        a{
+            text-decoration: none;
+            width: 80%;
             &:hover {
-                transform: scale(1.05);
+                transform: scale(1.1);
                 transition: transform 0.3s ease;
             }
-            
+        
         }
         &-title{
             font-family: $font-titulos-encabezados;
@@ -168,6 +173,8 @@ main {
             font-weight: 800;
             cursor: pointer;
             width: 90%;
+            margin-left: auto;
+            margin-right: auto;
         }
         &-description{
             font-family: $font-textos;
@@ -175,6 +182,7 @@ main {
             color: $color-texto-secundario;
             margin-bottom: 1rem;
             width: 80%;
+            padding: 15px;;
         }
     }
 
