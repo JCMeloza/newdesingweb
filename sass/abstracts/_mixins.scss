@@ -27,11 +27,11 @@
 }
 
 //tarjeta semitrasparente
-@mixin tarjeta-semitransparente($width, $height,$border-radius) {
+@mixin tarjeta-semitransparente($width, $height,$border-radius,$padding,$transparency) {
   width: $width;
   height: $height;
-  padding: 2rem;
-  background: rgba(255, 255, 255, 0.1);
+  padding: $padding;
+  background: rgba(255, 255, 255,$transparency);
   border-radius: $border-radius;
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(10px);
