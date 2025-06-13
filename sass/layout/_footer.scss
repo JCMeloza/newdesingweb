@@ -1,0 +1,16 @@
+@use "../abstracts/mixins" as m;
+@use "../abstracts/variables" as *;
+.footer {
+    @include m.tarjeta-semitransparente(100%, 100%, 0px,1rem,0.1);
+    color: #ffffff;
+    //padding: 2rem 0;
+    text-align: center;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+
+    p {
+        margin: 0;
+        font-size: 1rem;
+    }
+}
