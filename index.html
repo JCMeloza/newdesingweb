@@ -13,121 +13,142 @@
   </head>
   <body>
     <header class="header">
-        <div class="header__logo">
-          <img src="/img/logo.png" alt="" class="header__logo-image" />
+      <div class="header__logo">
+        <img src="/img/logo.png" alt="" class="header__logo-image" />
+      </div>
+      <nav class="header__nav" role="navigation">
+        <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+        <label for="menu-toggle" class="menu-icon"></label>
+
+        <ul class="header__nav-list">
+          <li class="header__nav-item dropdown">
+            <input
+              type="checkbox"
+              id="dropdown-toggle"
+              class="dropdown-toggle"
+            />
+            <label for="dropdown-toggle" class="dropdown-label">
+              Cursos <span class="dropdown-arrow">▼</span>
+            </label>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="#" class="dropdown-item"
+                  >Master en Desarrollo Web Full-Stack</a
+                >
+              </li>
+              <li>
+                <a href="#" class="dropdown-item"
+                  >Master en Inteligencia Artificial</a
+                >
+              </li>
+              <li>
+                <a href="#" class="dropdown-item"
+                  >Master en Desarrollo Blockchain</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li class="header__nav-item">
+            <a href="/about.html">Quienes Somos</a>
+          </li>
+          <li class="header__nav-item registro">
+            <a href="/register.html">Registro</a>
+          </li>
+          <li class="header__nav-item"><a href="/login.html">Login</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="main">
+      <!-- Hero Section ------------------------------------------------->
+
+      <section class="hero">
+        <div class="hero__content">
+          <video
+            class="hero__video"
+            width="100%"
+            poster="/img/programando.webp"
+            autoplay
+            loop
+            muted
+            playsinline
+          >
+            <source src="/img/hero.mp4" type="video/mp4" />
+            Tu navegador no soporta el formato de video MP4.
+          </video>
+          <h1 class="hero__title">Conquer Blocks</h1>
+          <p class="hero__subtitle">
+            Aprende a programar y domina el desarrollo web, inteligencia
+            artificial y blockchain.
+          </p>
+          <a href="/register.html" class="hero__cta">¡Comienza ahora!</a>
         </div>
-        <nav class="header__nav" role="navigation">
-          <input type="checkbox" id="menu-toggle" class="menu-toggle" />
-          <label for="menu-toggle" class="menu-icon"></label>
+      </section>
 
-          <ul class="header__nav-list">
-            <li class="header__nav-item dropdown">
-              <input
-                type="checkbox"
-                id="dropdown-toggle"
-                class="dropdown-toggle"
-              />
-              <label for="dropdown-toggle" class="dropdown-label">
-                Cursos <span class="dropdown-arrow">▼</span>
-              </label>
-              <ul class="dropdown-menu">
-                <li>
-                  <a href="#" class="dropdown-item"
-                    >Master en Desarrollo Web Full-Stack</a
-                  >
-                </li>
-                <li>
-                  <a href="#" class="dropdown-item"
-                    >Master en Inteligencia Artificial</a
-                  >
-                </li>
-                <li>
-                  <a href="#" class="dropdown-item"
-                    >Master en Desarrollo Blockchain</a
-                  >
-                </li>
-              </ul>
-            </li>
-            <li class="header__nav-item">
-              <a href="/about.html">Quienes Somos</a>
-            </li>
-            <li class="header__nav-item registro">
-              <a href="/register.html">Registro</a>
-            </li>
-            <li class="header__nav-item"><a href="/login.html">Login</a></li>
-          </ul>
-        </nav>
-      </header>
-      <main class="main">
-        <!-- Hero Section ------------------------------------------------->
+      <!-- Cursos Section ------------------------------------------------->
 
-        <section class="hero">
-          <div class="hero__content">
-            
-            
-            <video class="hero__video" width="100%" poster="/img/programando.webp" autoplay loop muted playsinline>
-              <source src="/img/hero.mp4" type="video/mp4" />
-              Tu navegador no soporta el formato de video MP4.
-            </video>
-            <h1 class="hero__title">Conquer Blocks</h1>
-            <p class="hero__subtitle">
-              Aprende a programar y domina el desarrollo web, inteligencia
-              artificial y blockchain.
+      <section class="features">
+        <h2 class="features__title">Nuestros Cursos</h2>
+
+        <div class="features__grid">
+          <article class="features__item">
+            <img
+              src="/img/fullstack.webp"
+              alt="Desarrollo Full-Stack"
+              class="features__item-image"
+            />
+            <h3 class="features__item-title">Master en Desarrollo Web Full-Stack</h3>
+            <p class="features__item-description">
+              Aprende las tecnologías más demandadas del mercado.
             </p>
-            <a href="/register.html" class="hero__cta">¡Comienza ahora!</a>
-          </div>
-        </section>
+          </article>
+          <article class="features__item">
+            <img
+              src="/img/masteria.webp"
+              alt="Desarrollo Inteligencial Artificial"
+              class="features__item-image"
+            />
+            <h3 class="features__item-title">Master en Inteligencia Artificial</h3>
+            <p class="features__item-description">
+              Domina el futuro con nuestros cursos de IA.
+            </p>
+          </article>
+          <article class="features__item">
+            <img
+              src="/img/masterblockchain.webp"
+              alt="Desarrollo Blockchain"
+              class="features__item-image"
+            />
+            <h3 class="features__item-title">Master en Desarrollo Blockchain</h3>
+            <p class="features__item-description">
+              Conviértete en un experto en tecnología blockchain.
+            </p>
+          </article>
+        </div>
+      </section>
 
-        <!-- Cursos Section ------------------------------------------------->
+      <!-- Testimonios Section ---------------------------------------------->
 
-        <section class="features">
-          <h2 class="features__title">Nuestros Cursos</h2>
-          <div class="features__grid">
-            <div class="feature">
-              <h3 class="feature__title">Desarrollo Web Full-Stack</h3>
-              <p class="feature__description">
-                Aprende las tecnologías más demandadas del mercado.
-              </p>
-            </div>
-            <div class="feature">
-              <h3 class="feature__title">Inteligencia Artificial</h3>
-              <p class="feature__description">
-                Domina el futuro con nuestros cursos de IA.
-              </p>
-            </div>
-            <div class="feature">
-              <h3 class="feature__title">Blockchain</h3>
-              <p class="feature__description">
-                Conviértete en un experto en tecnología blockchain.
-              </p>
-            </div>
-          </div>
-        </section>
+      <section class="testimonials">
+        <h2 class="testimonials__title">Testimonios</h2>
+        <div class="testimonials__grid">
+          <blockquote class="testimonial">
+            "Gracias a Conquer Blocks he conseguido mi primer trabajo como
+            desarrollador web."
+            <cite>- Juan Pérez</cite>
+          </blockquote>
+          <blockquote class="testimonial">
+            "Los cursos son muy completos y los profesores son excelentes."
+            <cite>- María López</cite>
+          </blockquote>
+        </div>
+      </section>
+    </main>
 
-        <!-- Testimonios Section ---------------------------------------------->
+    <!-- footer ---------------------------------------------->
 
-        <section class="testimonials">
-          <h2 class="testimonials__title">Testimonios</h2>
-          <div class="testimonials__grid">
-            <blockquote class="testimonial">
-              "Gracias a Conquer Blocks he conseguido mi primer trabajo como
-              desarrollador web."
-              <cite>- Juan Pérez</cite>
-            </blockquote>
-            <blockquote class="testimonial">
-              "Los cursos son muy completos y los profesores son excelentes."
-              <cite>- María López</cite>
-            </blockquote>
-          </div>
-        </section>
-      </main>
-
-      <!-- footer ---------------------------------------------->
-
-      <footer class="footer">
-        <p>&copy; 2023 Conquer Blocks. Todos los derechos reservados.</p>
-      </footer>
-    </div>
+    <footer class="footer">
+      <p>&copy; 2023 Conquer Blocks. Todos los derechos reservados.</p>
+    </footer>
 
     <script type="module" src="/src/main.js"></script>
   </body>
