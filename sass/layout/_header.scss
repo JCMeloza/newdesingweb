@@ -7,7 +7,7 @@
     left: 0;
     width: 100%;
     z-index: 1000;
-    @include m.tarjeta-semitransparente(100%, 50px,0px);
+    @include m.tarjeta-semitransparente(100%, 50px,0px,2rem,0.1);
     display: flex;
     align-items: center;
     justify-content: space-between;
