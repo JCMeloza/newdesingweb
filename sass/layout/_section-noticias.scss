@@ -1,0 +1,38 @@
+@use "../abstracts/mixins" as m;
+@use "../abstracts/variables" as *;
+
+.news{
+    
+    margin-bottom: 25px;
+    @include m.tarjeta-semitransparente(100%, 100%, 20px, 0px, 0.1);
+    &__header{
+        
+        &-title{
+            font-family: $font-titulos-encabezados;
+            padding: 5px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            text-align: center;
+            font-size: 2rem;
+            background-image: $color-borde;
+            border-radius: 10px;
+            width: 95%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        &-img{
+            width: 100%;
+        }
+        
+    }
+    &__content{
+        padding: 10px;
+        font-size: 1.1rem;
+        line-height: 1.5;
+        text-align: justify;
+        color:#ecf2c9;
+        &-text{
+            margin-bottom: 10px;
+        }
+    }
+}
