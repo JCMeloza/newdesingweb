@@ -6,6 +6,7 @@ main {
     width: 100%;
     padding-left: 1rem;
     padding-right: 1rem;
+    margin-bottom: 1rem;
 }
 
 .hero {
@@ -238,4 +239,17 @@ main {
             width: 80%;
         }
     }
+}
+
+.registros__login{
+    margin-top: 10px;
+    text-align: center;
+    margin-bottom: 10px;
+    padding: 5px;
+    
+}
+.registros__link{
+    text-decoration: none;
+    color: #9E0ADC;
+    cursor: pointer;
 }
