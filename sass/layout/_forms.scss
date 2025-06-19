@@ -1,0 +1,74 @@
+@use "../abstracts/mixins" as m;
+@use "../abstracts/variables" as *;
+
+.registros {
+  @include m.tarjeta-semitransparente(100%, 100%, 10px, 1px, 0.1);
+  h1 {
+    @include m.titulo-encabezado(5px, 50%);
+  }
+  &__form {
+    padding: 6px;
+    fieldset {
+      margin-top: 10px;
+    }
+    legend {
+      font-size: 1.5rem;
+      padding: 5px;
+      color: aqua;
+    }
+    &-group {
+      margin-bottom: 1rem;
+      display: flex;
+      flex-direction: column;
+      font-size: 1.5rem;
+      gap: 10px;
+      padding: 10px;
+
+      &-label {
+        color: #a9e29d;
+        font-weight: bold;
+        font-family: $font-titulos-encabezados;
+      }
+
+      &-input {
+        padding: 0.9rem 1rem;
+        font-size: 1.5rem;
+        border-radius: 10px;
+        background-color: #3e146d;
+        color: white;
+      }
+
+      &-checkbox {
+        transform: scale(1.5);
+        margin-right: 10px;
+      }
+
+      &-link {
+        text-decoration: none;
+        color: white;
+      }
+    }
+
+    &-button {
+      display: block;
+      width: 90%;
+      padding: 1rem;
+      background: $color-borde;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s;
+      margin-bottom: 2rem;
+      margin-left: auto;
+      margin-right: auto;
+      &:hover{
+        background: $color-botones;
+        color: #3e146d;
+    }
+    }
+    
+  }
+}
