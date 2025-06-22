@@ -311,6 +311,7 @@ main {
             display: block;
             margin-bottom: 10px;
             font-weight: bold;
+            @include m.titulo-encabezado(5px, 50%);
           }
           &-input {
             width: 100%;
