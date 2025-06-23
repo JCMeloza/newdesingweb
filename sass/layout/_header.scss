@@ -117,7 +117,7 @@
 @include m.breakpoint(tablet) {
     .header {
         &__logo {
-            width: 220px; // Logo más grande en tablet
+            width: 320px; // Logo más grande en tablet
         }
     }
 }

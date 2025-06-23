@@ -52,9 +52,6 @@ main {
     font-weight: 900;
     text-transform: uppercase;
     color: #c0eb84d5;
-    //position: absolute;
-    //top:167px;
-    //left: 47px;
     z-index: 1;
     border: 2px solid $color-botones;
     border-radius: 10px;
@@ -69,6 +66,18 @@ main {
       left: 50%;
       transform: translateX(-50%);
       border-radius: 2px;
+      @include m.breakpoint(tablet){
+        bottom: 175px;
+      }
+      @include m.breakpoint(tablethorizontal){
+        bottom: 190px;
+      }
+    }
+    @include m.breakpoint(tablet){
+      font-size: 2.5rem;
+    }
+    @include m.breakpoint(tablethorizontal){
+      font-size: 3rem;
     }
   }
   &__subtitle {
@@ -77,9 +86,11 @@ main {
     font-size: 1.2rem;
     margin-bottom: 1.5rem;
     color: $color-texto-secundario;
-    //position: absolute;
     top: 180px;
     text-align: center;
+    @include m.breakpoint(tablet){
+      font-size: 1.5rem;
+    }
   }
   &__video {
     width: 100%;
@@ -106,6 +117,10 @@ main {
       color: $color-texto;
       box-shadow: 0 8px 15px $color-botones;
     }
+    @include m.breakpoint(tablethorizontal){
+      font-size: 1.5rem;
+      padding: 20px 40px;
+    }
   }
 }
 // section cursos
@@ -114,6 +129,7 @@ main {
 
   &__title {
     @include m.titulo-encabezado(5px, 50%);
+    
   }
 
   &__grid {
@@ -128,6 +144,7 @@ main {
     justify-content: center;
     padding: 1rem;
     text-align: center;
+    
 
     @include m.tarjeta-semitransparente(100%, 100%, 10px, 1px, 0.1);
     img {
@@ -166,6 +183,44 @@ main {
       width: 80%;
       padding: 15px;
     }
+    @include m.breakpoint(tablet){
+      &:first-of-type {
+        grid-column: span 2; // Ocupa dos columnas en tablet
+        flex-direction: row;
+        gap: 5px;
+        img{
+          width: 40%;
+        }
+          
+      }
+    }
+    @include m.breakpoint(tablethorizontal){
+      &:first-of-type {
+        grid-column: span 3; // Ocupa dos columnas en tablet
+        flex-direction: row;
+        gap: 5px;
+        img{
+          width: 300px;
+        }
+          
+      }
+      &:nth-of-type(2) {
+        grid-column: span 1;
+        flex-direction: column;
+        gap: 5px;
+        img{
+          width: 300px;
+        }
+      }
+      &:nth-of-type(3){
+        grid-column: span 2;
+        flex-direction: column;
+        gap: 5px;
+        img{
+          width: 300px;
+        }
+      }
+    }
   }
 }
 
@@ -173,8 +228,8 @@ main {
 .blog {
   margin-bottom: 20px;
   &__title {
-    @include m.titulo-encabezado(5px, 50%);
     margin-top: 20px;
+    @include m.titulo-encabezado(5px, 50%);
   }
   &__grid {
     display: grid;

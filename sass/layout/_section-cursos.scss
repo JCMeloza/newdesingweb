@@ -28,10 +28,13 @@
     &-description {
       width: 90%;
       font-size: 1.2rem;
-      text-align: justify;
+      text-align: left;
     }
     &-image {
       width: 100%;
+      @include m.breakpoint(tablet){
+        width: 64%;
+      }
     }
   }
 
@@ -97,10 +100,10 @@
   @include m.tarjeta-semitransparente(100%, 100%, 10px, 1px, 0.1);
 
   &__profe {
-    @include m.titulo-encabezado(5px, 50%);
     display: flex;
     flex-direction: column;
     gap: 20px;
+    @include m.titulo-encabezado(5px, 50%);
   }
 
   &__info {
@@ -122,7 +125,7 @@
     width: 90%;
     margin: auto;
     p {
-      text-align: justify;
+      text-align: left;
       font-size: 1.1rem;
       margin-top: 20px;
     }
@@ -135,13 +138,13 @@
   @include m.tarjeta-semitransparente(100%, 100%, 10px, 1px, 0.1);
 
   &__title {
-    @include m.titulo-encabezado(5px, 50%);
     font-size: 2rem;
+    @include m.titulo-encabezado(5px, 50%);
   }
   &__text {
     font-size: 1.3rem;
     line-height: 35px;
-    text-align: center;
+    text-align: left;
     margin: auto;
   }
 }
@@ -150,7 +153,12 @@
 .mainia {
   &__hero {
     @include m.tarjeta-semitransparente(100%, 100%, 10px, 1px, 0.1);
-
+    @include m.breakpoint(tablet){
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
     &-img {
       width: 100%;
       opacity: 0.7;
@@ -159,18 +167,27 @@
         transform: rotateY(360deg);
         transition: 3s;
       }
+      @include m.breakpoint(tablet){
+        width: 64%;
+        
+        border-radius: 12px;
+      }
     }
     &-title {
-      @include m.titulo-encabezado(5px, 50%);
       position: absolute;
       top: 155px;
       margin: auto;
+      @include m.titulo-encabezado(5px, 50%);
     }
     &-description {
       font-size: 1.2rem;
       text-align: center;
       position: absolute;
       bottom: 50px;
+      @include m.breakpoint(tablet){
+        bottom: 100px;
+        font-size:1.5rem;
+      }
     }
   }
   &__content {
