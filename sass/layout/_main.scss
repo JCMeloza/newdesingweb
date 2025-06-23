@@ -9,6 +9,16 @@ main {
   padding-left: 1rem;
   padding-right: 1rem;
   margin-bottom: 1rem;
+  @include m.breakpoint(desktop) {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  @include m.breakpoint(desktopxl) {
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .hero {
@@ -66,17 +76,17 @@ main {
       left: 50%;
       transform: translateX(-50%);
       border-radius: 2px;
-      @include m.breakpoint(tablet){
+      @include m.breakpoint(tablet) {
         bottom: 175px;
       }
-      @include m.breakpoint(tablethorizontal){
+      @include m.breakpoint(tablethorizontal) {
         bottom: 190px;
       }
     }
-    @include m.breakpoint(tablet){
+    @include m.breakpoint(tablet) {
       font-size: 2.5rem;
     }
-    @include m.breakpoint(tablethorizontal){
+    @include m.breakpoint(tablethorizontal) {
       font-size: 3rem;
     }
   }
@@ -88,7 +98,7 @@ main {
     color: $color-texto-secundario;
     top: 180px;
     text-align: center;
-    @include m.breakpoint(tablet){
+    @include m.breakpoint(tablet) {
       font-size: 1.5rem;
     }
   }
@@ -117,7 +127,7 @@ main {
       color: $color-texto;
       box-shadow: 0 8px 15px $color-botones;
     }
-    @include m.breakpoint(tablethorizontal){
+    @include m.breakpoint(tablethorizontal) {
       font-size: 1.5rem;
       padding: 20px 40px;
     }
@@ -129,7 +139,6 @@ main {
 
   &__title {
     @include m.titulo-encabezado(5px, 50%);
-    
   }
 
   &__grid {
@@ -144,7 +153,6 @@ main {
     justify-content: center;
     padding: 1rem;
     text-align: center;
-    
 
     @include m.tarjeta-semitransparente(100%, 100%, 10px, 1px, 0.1);
     img {
@@ -182,43 +190,52 @@ main {
       margin-bottom: 1rem;
       width: 80%;
       padding: 15px;
+      @include m.breakpoint(desktopxl) {
+        font-size: 1.5rem;
+      }
     }
-    @include m.breakpoint(tablet){
+    @include m.breakpoint(tablet) {
       &:first-of-type {
         grid-column: span 2; // Ocupa dos columnas en tablet
         flex-direction: row;
         gap: 5px;
-        img{
+        img {
           width: 40%;
         }
-          
       }
     }
-    @include m.breakpoint(tablethorizontal){
+    @include m.breakpoint(tablethorizontal) {
       &:first-of-type {
         grid-column: span 3; // Ocupa dos columnas en tablet
         flex-direction: row;
         gap: 5px;
-        img{
+        img {
           width: 300px;
         }
-          
       }
       &:nth-of-type(2) {
         grid-column: span 1;
         flex-direction: column;
         gap: 5px;
-        img{
+        img {
           width: 300px;
         }
       }
-      &:nth-of-type(3){
+      &:nth-of-type(3) {
         grid-column: span 2;
         flex-direction: column;
         gap: 5px;
-        img{
+        img {
           width: 300px;
         }
+      }
+    }
+    @include m.breakpoint(desktopxl) {
+      &:first-of-type {
+        grid-column: span 2;
+      }
+      &:nth-of-type(3) {
+        grid-column: span 3;
       }
     }
   }
@@ -263,6 +280,9 @@ main {
       font-size: 1.5rem;
       margin-top: 1rem;
       margin-bottom: 1rem;
+      @include m.breakpoint(desktopxl) {
+        font-size: 1.8rem;
+      }
     }
     &-link {
       font-family: $font-titulos-encabezados;
@@ -285,6 +305,9 @@ main {
       color: $color-texto-secundario;
       margin-bottom: 1rem;
       width: 80%;
+      @include m.breakpoint(desktopxl) {
+        font-size: 1.5rem;
+      }
     }
   }
 }
@@ -316,7 +339,12 @@ main {
 
     &-card {
       @include m.tarjeta-semitransparente(100%, 100%, 10px, 1rem, 0.1);
-      //height: 90vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      text-align: center;
       &-logo {
         width: 250px;
         height: auto;
@@ -329,7 +357,7 @@ main {
           width: 100%;
         }
       }
-      &-forget{
+      &-forget {
         text-align: center;
         margin-top: 10px;
         margin-bottom: 20px;
@@ -337,10 +365,10 @@ main {
         font-size: 1.2rem;
         color: white;
         cursor: pointer;
-        a{
-            color:#00ffea;
-            text-decoration: none;
-            cursor: pointer;
+        a {
+          color: #00ffea;
+          text-decoration: none;
+          cursor: pointer;
         }
       }
       &-form {
