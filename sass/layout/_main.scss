@@ -437,65 +437,61 @@ main {
 }
 
 // === About Page Styles ===
-.about__section {
-  @include m.tarjeta-semitransparente(100%, 100%, 10px, 2rem, 0.1);
-  margin: 2rem auto 2rem auto;
-  max-width: 800px;
-  padding: 2rem 1.5rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  box-shadow: 0 4px 20px rgba(166, 24, 231, 0.1);
+.about {
+
+  &__section{
+      @include m.tarjeta-semitransparente(100%, 100%, 10px, 2rem, 0.1);
+      margin: 2rem auto 2rem auto;
+      max-width: 800px;
+      padding: 2rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      box-shadow: 0 4px 20px rgba(166, 24, 231, 0.1);
+      p,ul{
+        font-family: $font-textos;
+        font-size: 1.1rem;
+        color: $color-texto;
+        margin-bottom: 1rem;
+        line-height: 1.7;
+        text-align: left;
+      }
+      strong{
+        color: #9e0adc;
+      }
+      ul{
+        list-style: disc inside;
+        margin-bottom: 1.5rem;
+        padding-left: 1.2rem;
+      }
+  }
+  &__title {
+    font-family: $font-titulos-encabezados;
+    font-size: 1.4rem;
+    color: $color-botones;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    text-align: left;
+    font-weight: 700;
+  }
+  &__subtitle{
+    font-family: $font-titulos-encabezados;
+    font-size: 1.4rem;
+    color: $color-botones;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    text-align: left;
+    font-weight: 700;
+  }
+  &__description{
+    font-family: $font-textos;
+    font-size: 1.2rem;
+    color: $color-texto-secundario;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
 }
 
-.about__title {
-  font-family: $font-titulos-encabezados;
-  font-size: 2.2rem;
-  color: #9e0adc;
-  margin-bottom: 1.5rem;
-  text-align: center;
-  font-weight: 900;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.about__subtitle {
-  font-family: $font-titulos-encabezados;
-  font-size: 1.4rem;
-  color: $color-botones;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-  text-align: left;
-  font-weight: 700;
-}
-
-.about__description {
-  font-family: $font-textos;
-  font-size: 1.2rem;
-  color: $color-texto-secundario;
-  margin-bottom: 1.5rem;
-  text-align: center;
-}
-
-.about__section p,
-.about__section ul {
-  font-family: $font-textos;
-  font-size: 1.1rem;
-  color: $color-texto;
-  margin-bottom: 1rem;
-  line-height: 1.7;
-  text-align: left;
-}
-
-.about__section ul {
-  list-style: disc inside;
-  margin-bottom: 1.5rem;
-  padding-left: 1.2rem;
-}
-
-.about__section strong {
-  color: #9e0adc;
-}
 
 // Responsive
 @include m.breakpoint(tablet) {
