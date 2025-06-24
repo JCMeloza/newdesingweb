@@ -1,6 +1,6 @@
-# Conquer Blocks
+# Newdesignweb
 
-Conquer Blocks es un proyecto educativo ficticio que simula una plataforma de cursos de programación, inteligencia artificial y blockchain. Su objetivo es servir como ejemplo práctico para el aprendizaje de desarrollo web moderno, empleando buenas prácticas de organización y tecnologías actuales.
+Es un proyecto con fines educativo, creando un nuevo diseño a la web de cursos de programación, inteligencia artificial y blockchain, https://www.conquerblocks.com/ . Su objetivo es servir como ejemplo práctico para el aprendizaje de desarrollo web moderno, empleando buenas prácticas de organización y tecnologías actuales.
 
 ## Tecnologías empleadas
 
