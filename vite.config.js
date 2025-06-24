@@ -11,7 +11,7 @@ const htmlFiles = fs.readdirSync(__dirname)
   }, {})
 
 export default defineConfig({
-  base: "./",
+  base: "/newdesingweb/",
   server: {
     watch: {
       usePolling: true
